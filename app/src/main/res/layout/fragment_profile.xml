@@ -1,12 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.fragments.ProfileFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.ProfileFragment">
+
+    <ImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/kotlin"
+            app:layout_constraintBottom_toTopOf="@+id/name_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
 
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:id="@+id/email_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/profile_random_tmp_mail"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/email_confirm_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
 
-</FrameLayout>
+    <Button
+            android:id="@+id/email_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/profile_confirm_mail"
+            app:layout_constraintBottom_toTopOf="@+id/change_password_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_text_view" />
+
+    <Button
+            android:id="@+id/change_password_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/profile_change_password"
+            app:layout_constraintBottom_toTopOf="@+id/sign_out_button"
+            app:layout_constraintEnd_toEndOf="@+id/email_confirm_button"
+            app:layout_constraintStart_toStartOf="@+id/email_confirm_button"
+            app:layout_constraintTop_toBottomOf="@+id/email_confirm_button" />
+
+    <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/profile_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/change_password_button"
+            app:layout_constraintStart_toStartOf="@+id/change_password_button"
+            app:layout_constraintTop_toBottomOf="@+id/change_password_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

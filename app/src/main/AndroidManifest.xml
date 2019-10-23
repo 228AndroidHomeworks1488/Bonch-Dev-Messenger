@@ -11,11 +11,9 @@
             android:theme="@style/AppTheme">
         <activity android:name=".ui.activities.MainAppActivity">
         </activity>
-        <activity android:name=".ui.activities.SignUpActivity">
+        <activity android:name=".ui.activities.SignUpActivity" android:theme="@style/AppThemeNoActionBar">
         </activity>
-        <activity android:name=".ui.activities.SignInActivity">
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activities.SignInActivity" android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
