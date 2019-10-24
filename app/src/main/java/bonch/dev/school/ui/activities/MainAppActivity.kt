@@ -15,6 +15,9 @@ class MainAppActivity : AppCompatActivity() {
 
     fun initActivity(){
 
+        initViews()
+        setListeners()
+
         val fragmentManager = supportFragmentManager
 
         val fragment = ChatFragment()
@@ -22,10 +25,7 @@ class MainAppActivity : AppCompatActivity() {
         fragmentManager
             .beginTransaction()
             .add(R.id.fragment_section, fragment)
-            .addToBackStack("fragment")
             .commit()
-        //initViews()
-        //setListeners()
     }
 
     fun initViews(){

@@ -13,7 +13,6 @@ import bonch.dev.school.R
 class ChatFragment : Fragment() {
 
     private lateinit var sendMessageButton: Button
-    private lateinit var changePasswordButton: Button
     private lateinit var thisView: View
 
     override fun onCreateView(
@@ -32,7 +31,6 @@ class ChatFragment : Fragment() {
 
     fun initViews(){
         sendMessageButton = thisView.findViewById(R.id.send_message_button)
-        changePasswordButton = thisView.findViewById(R.id.change_password_button)
     }
 
     fun setListeners(){
@@ -41,6 +39,7 @@ class ChatFragment : Fragment() {
             fragmentManager!!.
                     beginTransaction().
                     replace(R.id.fragment_section, profileFragment).
+                    addToBackStack("").
                     commit()
         }
     }
