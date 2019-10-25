@@ -9,7 +9,7 @@
         tools:context=".ui.fragments.ChatFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="bottom"
             android:orientation="horizontal"
@@ -22,18 +22,17 @@
         <EditText
                 android:id="@+id/message_et"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:isScrollContainer="true"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/send_message_button"
                 app:layout_constraintEnd_toStartOf="@+id/send_message_button"
                 app:layout_constraintStart_toStartOf="parent" />
 
         <Button
                 android:id="@+id/send_message_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:background="@drawable/send"
-                app:layout_constraintBaseline_toBaselineOf="@+id/message_et"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
